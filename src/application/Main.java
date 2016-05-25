@@ -1,11 +1,10 @@
 package application;
 	
 import javafx.application.Application;
-import javafx.stage.Stage;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-
-import javafx.fxml.FXMLLoader;
+import javafx.stage.Stage;
 
 
 public class Main extends Application {
@@ -16,12 +15,12 @@ public class Main extends Application {
 		{
 			// Das ist der Controller der View
 			// Wie die View aussieht, steht als XML-Datei in der Datei Sample.fxml
-			Parent root = FXMLLoader.load(getClass().getResource("/application/View.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("View.fxml"));
 			
 			// Das ist die View
 			Scene scene = new Scene(root);
 			
-			// Das ist das Style Sheet für die View
+			// Das ist das Style Sheet fï¿½r die View
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			
 			// Das Main mit der ersten View verbinden.
